@@ -20,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('products',[ProductController::class,'index']);
 Route::middleware('auth:sanctum')->get('products/{product}',[ProductController::class,'show']);
 Route::middleware('auth:sanctum')->get('users',[UserController::class,'showAll']);
+Route::middleware('auth:sanctum')->get('marcas',[DataController::class,'marcas']);
+
+
+
 
 Route::post("login",[UserController::class,'index'])->name('login');
 
