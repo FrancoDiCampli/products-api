@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\UserController;
+use App\Http\Resources\ProductResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::middleware('auth:sanctum')->get('products',[ProductController::class,'index']);
+Route::middleware('auth:sanctum')->get('products/{product}',[ProductController::class,'show']);
+Route::middleware('auth:sanctum')->get('users',[UserController::class,'showAll']);
+
+Route::post("login",[UserController::class,'index'])->name('login');
+
+// Route::get('products',[ProductController::class,'index']);
+// Route::get('product/{product_id}',[ProductController::class,'show']);
+

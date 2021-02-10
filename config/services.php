@@ -14,6 +14,12 @@ return [
     |
     */
 
+    'galeno' => [
+        'base_uri' => env('GALENO_BASE_URL '),
+        'key' => env('GALENO_API_USER'),
+        'secret' => env('GALENO_API_PASS '),
+        'class' => App\Services\GalenoService::class,
+    ],
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
