@@ -13,6 +13,8 @@ class DataController extends Controller
         $marcas = array(
             array('codigo' =>"11",'descripcion'=>"CITROEN"),
             array('codigo' =>"12",'descripcion'=>"CHEVROLET"),
+            array('codigo' =>"13",'descripcion'=>"FORD"),
+            array('codigo' =>"14",'descripcion'=>"VOLKSWAGEN"),
 
         );
 
