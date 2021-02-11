@@ -23,12 +23,11 @@ class DataController extends Controller
     public function modelos($marca=""){
         $modelos = array(
             array('codigo' =>46,'modelo'=>"AGILE",'descripcion'=>"AGILE"),
-            array('codigo' =>47,'descripcion'=>"ASTRA",'descripcion'=>"ASTRA"),
+            array('codigo' =>47,'modelo'=>"ASTRA",'descripcion'=>"ASTRA"),
 
         );
-
         return response()->json($modelos);
-           
+          
     }
 
     public function anios($marca="",$modelo=""){

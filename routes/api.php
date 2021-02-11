@@ -21,6 +21,7 @@ use App\Http\Controllers\Api\ProductController;
 Route::middleware('auth:sanctum')->get('products',[ProductController::class,'index']);
 Route::middleware('auth:sanctum')->get('products/{product}',[ProductController::class,'show']);
 Route::middleware('auth:sanctum')->get('users',[UserController::class,'showAll']);
+
 Route::middleware('auth:sanctum')->get('marcas',[DataController::class,'marcas']);
 
 // Rutas al data sin persistir a la bbdd
