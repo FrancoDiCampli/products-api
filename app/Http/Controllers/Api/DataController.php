@@ -32,7 +32,7 @@ class DataController extends Controller
           
     }
 
-    public function anios($marca="",$modelo=""){
+    public function anios($marca,$modelo){
         $anios = array(
             array('codigo' =>"2010",'descripcion'=>"2010",'marca'=>$marca),
             array('codigo' =>"2016",'descripcion'=>"2016",'marca'=>$marca),
