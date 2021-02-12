@@ -29,7 +29,7 @@ class ProductFactory extends Factory
             'description' => $this->faker->text,
             'price' => $this->faker->text,
             'is_company' => $this->faker->boolean,
-            'branch_id' => Branch::factory(),
+            'branch_id' => rand(1,4),
         ];
     }
 }

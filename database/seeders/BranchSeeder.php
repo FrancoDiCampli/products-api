@@ -14,6 +14,31 @@ class BranchSeeder extends Seeder
      */
     public function run()
     {
-        Branch::factory()->count(5)->create();
+        $sentence ='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero veniam rem veritatis sint eum! Deleniti.';
+        
+        Branch::create([
+            'name' => 'Vida',
+            'code' => 'V',
+            'description' => $sentence,
+            'is_patrimonial' => false,
+        ]);
+        Branch::create([
+            'name' => 'Auto',
+            'code' => 'A',
+            'description' => $sentence,
+            'is_patrimonial' => true,
+        ]);
+        Branch::create([
+            'name' => 'Moto',
+            'code' => 'M',
+            'description' => $sentence,
+            'is_patrimonial' => true,
+        ]);
+        Branch::create([
+            'name' => 'Robo',
+            'code' => 'R',
+            'description' => $sentence,
+            'is_patrimonial' => false,
+        ]);
     }
 }
