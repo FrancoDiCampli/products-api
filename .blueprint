@@ -1,10 +1,10 @@
 created:
-    - database/factories/ProductFactory.php
     - database/factories/BranchFactory.php
-    - database/migrations/2021_02_12_203317_create_products_table.php
-    - database/migrations/2021_02_12_203318_create_branches_table.php
-    - app/Models/Product.php
+    - database/factories/ProductFactory.php
+    - database/migrations/2021_02_12_204232_create_branches_table.php
+    - database/migrations/2021_02_12_204233_create_products_table.php
     - app/Models/Branch.php
+    - app/Models/Product.php
     - database/seeders/BranchSeeder.php
     - database/seeders/ProductSeeder.php
 models:

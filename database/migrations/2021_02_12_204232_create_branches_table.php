@@ -13,8 +13,6 @@ class CreateBranchesTable extends Migration
      */
     public function up()
     {
-        Schema::disableForeignKeyConstraints();
-
         Schema::create('branches', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -23,8 +21,6 @@ class CreateBranchesTable extends Migration
             $table->boolean('is_patrimonial');
             $table->timestamps();
         });
-
-        Schema::enableForeignKeyConstraints();
     }
 
     /**

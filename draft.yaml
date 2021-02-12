@@ -1,11 +1,4 @@
 models:
-  Product:
-    name: string
-    code: string
-    description: longtext
-    price: longtext
-    is_company: boolean
-    branch_id: id
   Branch: 
     name: string
     code: string
@@ -13,4 +6,12 @@ models:
     is_patrimonial: boolean
     relationships:
       hasMany: Product
+  Product:
+    name: string
+    code: string
+    description: longtext
+    price: longtext
+    is_company: boolean
+    branch_id: id
+ 
 seeders: Branch, Product
