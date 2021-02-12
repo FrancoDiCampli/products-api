@@ -49,4 +49,4 @@ Route::get('products',[ProductController::class,'index']);
 Route::get('producto/{branch_id}',[ProductController::class,'getProducts']);
 
 Route::get('branches',[BranchController::class,'index']);
-Route::get('branches/{branch_id}',[BranchController::class,'show']);
+Route::get('branches/{branch}',[BranchController::class,'show']);
