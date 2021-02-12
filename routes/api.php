@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Resources\ProductResource;
 use App\Http\Controllers\Api\DataController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\BranchController;
 use App\Http\Controllers\Api\ProductController;
 
 /*
@@ -47,3 +48,5 @@ Route::get('products',[ProductController::class,'index']);
 // Route::get('product/{product_id}',[ProductController::class,'show']);
 Route::get('producto/{branch_id}',[ProductController::class,'getProducts']);
 
+Route::get('branches',[BranchController::class,'index']);
+Route::get('branches/{branch_id}',[BranchController::class,'show']);
