@@ -26,7 +26,7 @@ Route::middleware('auth:sanctum')->get('marcas',[DataController::class,'marcas']
 
 // Rutas al data sin persistir a la bbdd
 Route::middleware('auth:sanctum')->get('modelos/{marca?}',[DataController::class,'modelos']);
-Route::middleware('auth:sanctum')->get('anios/{marca}/{modelos}',[DataController::class,'anios']);
+Route::middleware('auth:sanctum')->get('anios/{marca?}/{modelos?}',[DataController::class,'anios']);
 Route::middleware('auth:sanctum')->get('submodelos/{marca?}/{modelo?}/{anio?}',[DataController::class,'subModelos']);
 
 Route::middleware('auth:sanctum')->get('tipoPersona',[DataController::class,'tipoPersona']);

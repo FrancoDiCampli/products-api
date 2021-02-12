@@ -2,8 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+use App\Models\Branch;
+use App\Models\Product;
 
 class ProductFactory extends Factory
 {
@@ -22,7 +24,12 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'code' => $this->faker->word,
+            'description' => $this->faker->text,
+            'price' => $this->faker->text,
+            'is_company' => $this->faker->boolean,
+            'branch_id' => rand(1,4),
         ];
     }
 }

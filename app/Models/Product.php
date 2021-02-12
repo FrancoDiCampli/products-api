@@ -2,19 +2,41 @@
 
 namespace App\Models;
 
-use App\Models\Branch;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
     use HasFactory;
 
-    protected $fillable=['branch_id','name','price','description'];
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'code',
+        'description',
+        'price',
+        'is_company',
+        'branch_id',
+    ];
 
-    public function branch(){
-        return $this->belongsTo(Branch::class);
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'is_company' => 'boolean',
+        'branch_id' => 'integer',
+    ];
+
+
+    public function branch()
+    {
+        return $this->belongsTo(\App\Models\Branch::class);
     }
-
-    
 }

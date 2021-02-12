@@ -14,18 +14,33 @@ class BranchSeeder extends Seeder
      */
     public function run()
     {
-        
+       
+        $sentence = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, nihil nulla. Modi rerum commodi cumque laudantium deserunt voluptate';
         Branch::create([
-            'name'=>'vida',
-            'description' => 'Lorem, ipsum dolor sit amet consectetur adips atque asperiores. Libero laborum incidunt numquam excepturi, maiores blanditiis.',
+            'name' =>'Vida',
+            'code' => '1',
+            'description' => $sentence,
+            'is_patrimonial' =>false,
+        ]);
+
+        Branch::create([
+            'name' =>'Auto',
+            'code' => '2',
+            'description' => $sentence,
+            'is_patrimonial' =>true,
+        ]);
+
+        Branch::create([
+            'name' =>'Moto',
+            'code' => '3',
+            'description' => $sentence,
+            'is_patrimonial' =>true,
         ]);
         Branch::create([
-            'name'=>'robo',
-            'description' => 'Lorem, ipsum dolor sit amet consectetur adips atque asperiores. Libero laborum incidunt numquam excepturi, maiores blanditiis.',
-        ]);
-        Branch::create([
-            'name'=>'auto',
-            'description' => 'Lorem, ipsum dolor sit amet consectetur adips atque asperiores. Libero laborum incidunt numquam excepturi, maiores blanditiis.',
+            'name' =>'Robo',
+            'code' => '4',
+            'description' => $sentence,
+            'is_patrimonial' =>false,
         ]);
     }
 }

@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\Branch;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+use App\Models\Branch;
 
 class BranchFactory extends Factory
 {
@@ -22,7 +23,10 @@ class BranchFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name,
+            'code' => $this->faker->word,
+            'description' => $this->faker->text,
+            'is_patrimonial' => $this->faker->boolean,
         ];
     }
 }

@@ -13,17 +13,20 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
+
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('branch_id');
             $table->string('name');
-            $table->float('price');
-            $table->string('description');
-
-            $table->foreign('branch_id')->references('id')->on('branches');
+            $table->string('code');
+            $table->longText('description');
+            $table->longText('price');
+            $table->boolean('is_company');
+            $table->foreignId('branch_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
-            $table->softDeletes();
         });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
