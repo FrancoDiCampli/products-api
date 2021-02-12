@@ -43,6 +43,7 @@ Route::middleware('auth:sanctum')->get('clausulas',[DataController::class,'claus
 
 Route::post("login",[UserController::class,'index'])->name('login');
 
-// Route::get('products',[ProductController::class,'index']);
+Route::get('products',[ProductController::class,'index']);
 // Route::get('product/{product_id}',[ProductController::class,'show']);
+Route::get('product/{branch_id}',[ProductController::class,'getProducts']);
 

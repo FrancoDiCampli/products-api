@@ -17,4 +17,8 @@ class ProductController extends Controller
         // return ProductResource::collection(Product::find($id)->with('branch')->first());
         return new ProductResource(Product::where('id',$product->id)->with('branch')->first());
     }
+
+    public function getProducts($branch){
+        return ProductResource::collection(Product::where('branch_id',$branch)->with('branch')->get());
+    }
 }
